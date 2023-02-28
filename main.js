@@ -46,7 +46,16 @@ $(function () {
   window.addEventListener('DOMContentLoaded', (event) => {
     setTimeout(() => {
       let navItems = document.getElementsByClassName('nav-item');
-      for (let i = 0; i < navItems.length; i++) {
+        for (let i = 0; i < navItems.length; i++) {
+            let subMenu = navItems[i].getElementsByClassName("sub-menu");
+            let subMenuItems = subMenu.length && subMenu.children;
+            if (subMenuItems) {
+                for (let j = 0; j < subMenuItems.length; j++) {
+                    subMenuItems[j].addEventListener('click', function ($event) {
+                        setnavigation($event);
+                    })
+                }
+            }
         navItems[i].addEventListener('click', function ($event) {
           setnavigation($event);
         })
@@ -387,7 +396,7 @@ function sendEmail(courseName, id) {
     Password: "64984B5E2D013B08CA5BA734B832F1F878EF",
     port: 2525,
     To: 'maringantikc@gmail.com',
-    From: "info@vedvisiontrainings.com",
+      From: "info@nsjinfotech.com",
     Subject: `Registration for ${courseName}`,
     Body: `<html>
     <ul style="list-style:none">
@@ -680,7 +689,7 @@ function loadOtherSliders() {
 }
 
 function setnavigation($event) {
-  let page = $event.currentTarget.firstElementChild.getAttribute('data');
+  let page = $event.target.getAttribute('data');
   fetch(page)
     .then(response => {
       return response.text()
