@@ -1,11 +1,4 @@
-/*
-  Theme Name:  NSJ Infotech - LMS Education HTML Template
-  Author: ZeTheme
-  Author URL: https://themeforest.net/user/pixelcurve
-  Support: zetheme24.com
-  Description: Creative  HTML5 template.
-  Version: 1.1
-*/
+
 
 /* CSS Index 
 -----------------------------------
@@ -3712,7 +3705,7 @@ p {
 .contact-from .main-form .singel-form textarea{
     width: 100%;
     height: 50px;
-    padding: 0 20px;
+    padding: 10px 20px;
     border: 1px solid #a1a1a1;
     border-radius: 5px;
     color: #8a8a8a;

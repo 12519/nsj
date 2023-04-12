@@ -33,35 +33,35 @@
                             <h2>Keep in touch</h2>
                         </div> <!-- section title -->
                         <div class="main-form pt-45">
-                            <form id="contact-form" action="#" method="post" data-toggle="validator">
+                            <form id="contact-form" action="send-email.php" method="post" data-toggle="validator" enctype="multipart/form-data">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         <div class="singel-form form-group">
-                                            <input name="name" type="text" placeholder="Your name" data-error="Name is required." required="required">
+                                            <input name="name" id="name" type="text" placeholder="Your name" data-error="Name is required." required="required">
                                             <div class="help-block with-errors"></div>
                                         </div> <!-- singel form -->
                                     </div>
                                     <div class="col-md-6">
                                         <div class="singel-form form-group">
-                                            <input name="email" type="email" placeholder="Email" data-error="Valid email is required." required="required">
+                                            <input name="email" type="email" placeholder="Email" id="email" data-error="Valid email is required." required="required">
                                             <div class="help-block with-errors"></div>
                                         </div> <!-- singel form -->
                                     </div>
                                     <div class="col-md-6">
                                         <div class="singel-form form-group">
-                                            <input name="subject" type="text" placeholder="Subject" data-error="Subject is required." required="required">
-                                            <div class="help-block with-errors"></div>
-                                        </div> <!-- singel form --> 
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="singel-form form-group">
-                                            <input name="phone" type="text" placeholder="Phone" data-error="Phone is required." required="required">
+                                            <input name="phone" type="text" id="phone" placeholder="Phone" data-error="Phone is required." required="required">
                                             <div class="help-block with-errors"></div>
                                         </div> <!-- singel form -->
                                     </div>
                                     <div class="col-md-12">
                                         <div class="singel-form form-group">
-                                            <textarea name="messege" placeholder="Messege" data-error="Please,leave us a message." required="required"></textarea>
+                                            <textarea name="messege" id="msg" placeholder="Messege" data-error="Please,leave us a message."></textarea>
+                                            <div class="help-block with-errors"></div>
+                                        </div> <!-- singel form -->
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="singel-form form-group">
+                                            <input type="file" name="file" id="resume" accept=".pdf,.doc,.docx" required="required"/>
                                             <div class="help-block with-errors"></div>
                                         </div> <!-- singel form -->
                                     </div>
@@ -70,7 +70,7 @@
                                         <div class="singel-form">
                                             <button type="submit" class="main-btn">Send</button>
                                         </div> <!-- singel form -->
-                                    </div> 
+                                    </div>
                                 </div> <!-- row -->
                             </form>
                         </div> <!-- main form -->
